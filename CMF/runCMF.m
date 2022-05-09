@@ -1,11 +1,14 @@
 function tS = runCMF(tS,nonorm)
+% function tS = runCMF(tS,nonorm)
+%
+% Regular CMF model training
 
 if nargin <2
     nonorm = 0;
 end
 
-train_labels = tS.train_labels;
-tags_train = tS.tags_train;
+VQ_train = tS.VQ_train;
+labels_train = tS.labels_train;
 
 max_lag = length(tS.L);
 
@@ -13,13 +16,13 @@ max_lag = length(tS.L);
 %% Training if weights for each model at each moment of time exists
 if(isfield(tS,'W'))
 
+    % Count transition weighted frequencies
+    for signal = 1:length(VQ_train)
 
-    for signal = 1:length(train_labels)
-
-        tag = tags_train(signal,:);
+        tag = labels_train(signal,:);
         tag(tag == 0) = [];
 
-        seq = train_labels{signal};
+        seq = VQ_train{signal};
 
         for t = 1:length(tag)
             F = zeros(max_lag,tS.alphabet_size,tS.alphabet_size);
@@ -40,13 +43,13 @@ if(isfield(tS,'W'))
 
     %% Normal training
 else
+    % Count transition frequencies
+    for signal = 1:length(VQ_train)
 
-    for signal = 1:length(train_labels)
-
-        tag = tags_train(signal,:);
+        tag = labels_train(signal,:);
         tag(tag == 0) = [];
 
-        seq = train_labels{signal};
+        seq = VQ_train{signal};
 
         F = zeros(max_lag,tS.alphabet_size,tS.alphabet_size);
 
@@ -63,6 +66,7 @@ else
     end
 end
 
+% Normalize to probs
 
 for t=1:tS.number_of_tags
     S=squeeze((sum(tS.T{t},3)));
@@ -78,7 +82,7 @@ if(nonorm == 0)
 
     for t=1:tS.number_of_tags
         sum_mat=sum_mat+tS.P{t};
-    end;
+    end
 
     for t=1:tS.number_of_tags
         tS.P{t}=tS.P{t}./sum_mat;

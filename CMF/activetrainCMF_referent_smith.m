@@ -1,17 +1,17 @@
 function tS = activetrainCMF_referent_smith(tS)
 
 
-train_labels = tS.train_labels;
-tags_train = tS.tags_train;
+VQ_train = tS.VQ_train;
+labels_train = tS.labels_train;
 
 max_lag = length(tS.L);
 
-for signal = 1:length(train_labels)
+for signal = 1:length(VQ_train)
 
-    tag = tags_train(signal,:);
+    tag = labels_train(signal,:);
     tag(tag == 0) = [];
 
-    seq = train_labels{signal};
+    seq = VQ_train{signal};
 
     p = testaaCMF(seq,tS,1);
 

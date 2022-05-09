@@ -1,7 +1,7 @@
 function tS = activetrainCMF(tS,alpha)
 
-train_labels = tS.train_labels;
-tags_train = tS.tags_train;
+VQ_train = tS.VQ_train;
+labels_train = tS.labels_train;
 
 max_lag = length(tS.L);
 
@@ -9,12 +9,12 @@ if nargin <2
    alpha = 0.66;
 end
 
-for signal = 1:length(train_labels)
+for signal = 1:length(VQ_train)
 
-    tag = tags_train(signal,:);
+    tag = labels_train(signal,:);
     tag(tag == 0) = [];
 
-    seq = train_labels{signal};
+    seq = VQ_train{signal};
 
     p = testaaCMF(seq,tS,1);
 
@@ -53,6 +53,6 @@ for signal = 1:length(train_labels)
 
 
 
-    procbar(signal,length(train_labels));
+    procbar(signal,length(VQ_train));
 
 end

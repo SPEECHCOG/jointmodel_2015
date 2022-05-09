@@ -63,7 +63,7 @@ for iter = 1:n_iters
                 train_filenames = [train_filenames;tmp3];
             end
 
-            size(data_train)
+            
 
             if(n_to_train ~= 4)
                 [~,~,data_test,tags_test,taginds,~,test_filenames,testpoints,testinds]  = getExperimentData_generalization_Exp(1,tags((2397*(totest-1))+1:2397*totest,:),data((2397*(totest-1))+1:2397*totest),filenames((2397*(totest-1))+1:2397*totest),tagnames,n_to_train);
