@@ -1,6 +1,10 @@
 
 clear all
 
+addpath('../aux_scripts/');
+addpath('../CMF/');
+addpath('../aux_scripts/k-means/');
+
 
 curdir = pwd;
 

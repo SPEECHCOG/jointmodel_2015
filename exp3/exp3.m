@@ -4,9 +4,9 @@
 clear all
 
 
-addpath('../aux/');
+addpath('../aux_scripts/');
 addpath('../CMF/');
-addpath('../aux/k-means/');
+addpath('../aux_scripts/k-means/');
 curdir = pwd;
 
 

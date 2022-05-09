@@ -1,6 +1,10 @@
 
 curdir = pwd;
 
+addpath('../aux_scripts/');
+addpath('../CMF/');
+addpath('../aux_scripts/k-means/');
+
 cbsize = 64;
 n_iters = 30;   
 
