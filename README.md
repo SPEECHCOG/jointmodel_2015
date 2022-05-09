@@ -12,10 +12,20 @@ All code in MATLAB, except k-means implementation in `aux/k-means`, where `eucl_
 
 #### About data
 
-Experiments 1 and 2 come with the necessary data files (MBROLA-based syllables) to create the required experimental stimuli. Experiments 3–6 require CAREGIVER corpus. However, pre-computed discretized representations of the corpora are provided in `expX/data/` for default codebook size and talker ID. 
+Experiments 1 and 2 come with the necessary data files (MBROLA-based syllables) to create the required experimental stimuli. Experiments 3–6 require CAREGIVER corpus. However, pre-computed discretized representations of the corpora are provided in `expX/data/` for default codebook size and talker ID.
+
+#### About the model
+
+The basic "concept matrix" (CM) model is explained in Räsänen & Laine (2012; Pattern Recognition; http://www.sciencedirect.com/science/article/pii/S0031320311002044) and adapted to the experiments here, as explained in the paper (Räsänen & Rasilo, 2015; Psychological Review).
 
 #### Running the experiments
 
 By default, each experiment is executed by running `expX.m` inside the corresponding experiment folder. Experiment folders may also contain additional scripts for result plotting.
 
 Current documentation is sparse, so please direct questions at Okko Räsänen (firstname.surname@tuni.fi) in case of issues.
+
+#### Reused code
+
+`sigstar.m` by Rob Campbell
+`make_MFCC_And_MMFCC2_features.m` by Saikat Chatterjee, Chris Koniaris, Bastiaan Kleijn
+`k-means` by Mike Brookes and Chuck Anderson
