@@ -4,6 +4,8 @@ Model and experiment scripts used in Räsänen & Rasilo (2015): A joint-model of
 
 All code in MATLAB, except k-means implementation in `aux/k-means`, where `eucl_dx.c` has to be compiled with mex for non-mac64 platforms. You can also substitute all k-means calls with MATLAB k-means, but compatible results are not guaranteed.
 
+![alt text](img/block.png)
+
 #### Basic structure:
 
 - Each experiment is located in a separate sub-folder (e.g., `exp1/`).
