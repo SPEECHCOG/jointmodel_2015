@@ -22,6 +22,10 @@ The basic "concept matrix" (CM) model is explained in Räsänen & Laine (2012; P
 
 By default, each experiment is executed by running `expX.m` inside the corresponding experiment folder. Experiment folders may also contain additional scripts for result plotting.
 
+#### CM model demo
+
+A small demo for running the model for cross-situational learning is located in `demo/cmf_demo.m` using pre-computed VQ indices and visual referents for CAREGIVER Y2 UK corpus (Altosaar et al., 2010). Demo illustrates the basic training and model activation extraction process.
+
 
 #### Reused code
 
