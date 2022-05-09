@@ -4,11 +4,17 @@ Model and experiment scripts used in Räsänen & Rasilo (2015): A joint-model of
 
 All code in MATLAB, except k-means implementation in `aux/k-means`, where `eucl_dx.c` has to be compiled with mex for non-mac64 platforms. You can also substitute all k-means calls with MATLAB k-means, but compatible results are not guaranteed.
 
-Basic structure:
+#### Basic structure:
 
 - Each experiment is located in a separate sub-folder (e.g., `exp1/`).
 - "CM-fast" (CMF) model is located in `CMF/`.
 - Aux scripts are located in `aux_scripts/`
+
+#### About data
+
+Experiments 1 and 2 come with the necessary data files (MBROLA-based syllables) to create the required experimental stimuli. Experiments 3–6 require CAREGIVER corpus. However, pre-computed discretized representations of the corpora are provided in `expX/data/` for default codebook size and talker ID. 
+
+#### Running the experiments
 
 By default, each experiment is executed by running `expX.m` inside the corresponding experiment folder. Experiment folders may also contain additional scripts for result plotting.
 

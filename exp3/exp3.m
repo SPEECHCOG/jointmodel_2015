@@ -13,7 +13,7 @@ curdir = pwd;
 experiments = [1,2,3,4,5];
 n_iters = 20;       % How many iterations per experiment (default 7 to match with yurovsky data).
 talker = 1;         % Talkers 1-4
-cbsize = 64;        % VQ codebook size 
+cbsize = 32;        % VQ codebook size 
 
 filename = [curdir '/data/'  sprintf('exp3_data_%d_cb%d.mat',talker,cbsize)];
 
