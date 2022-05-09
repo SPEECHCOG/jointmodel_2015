@@ -22,10 +22,13 @@ The basic "concept matrix" (CM) model is explained in Räsänen & Laine (2012; P
 
 By default, each experiment is executed by running `expX.m` inside the corresponding experiment folder. Experiment folders may also contain additional scripts for result plotting.
 
-Current documentation is sparse, so please direct questions at Okko Räsänen (firstname.surname@tuni.fi) in case of issues.
 
 #### Reused code
 
 `sigstar.m` by Rob Campbell
 `make_MFCC_And_MMFCC2_features.m` by Saikat Chatterjee, Chris Koniaris, Bastiaan Kleijn
 `k-means` by Mike Brookes and Chuck Anderson
+
+#### Questions & feedback
+
+The current documentation is sparse (here and inline), so please direct questions at Okko Räsänen (firstname.surname@tuni.fi) in case of issues.
